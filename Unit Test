@@ -1,0 +1,179 @@
+Imports Microsoft.VisualStudio.TestTools.UnitTesting
+
+Imports Arithmetic
+
+
+
+'''<summary>
+'''This is a test class for ArithmeticFunctionsTest and is intended
+'''to contain all ArithmeticFunctionsTest Unit Tests
+'''</summary>
+<TestClass()> _
+Public Class ArithmeticFunctionsTest
+
+
+    Private testContextInstance As TestContext
+
+    '''<summary>
+    '''Gets or sets the test context which provides
+    '''information about and functionality for the current test run.
+    '''</summary>
+    Public Property TestContext() As TestContext
+        Get
+            Return testContextInstance
+        End Get
+        Set(ByVal value As TestContext)
+            testContextInstance = Value
+        End Set
+    End Property
+
+#Region "Additional test attributes"
+    '
+    'You can use the following additional attributes as you write your tests:
+    '
+    'Use ClassInitialize to run code before running the first test in the class
+    '<ClassInitialize()>  _
+    'Public Shared Sub MyClassInitialize(ByVal testContext As TestContext)
+    'End Sub
+    '
+    'Use ClassCleanup to run code after all tests in a class have run
+    '<ClassCleanup()>  _
+    'Public Shared Sub MyClassCleanup()
+    'End Sub
+    '
+    'Use TestInitialize to run code before running each test
+    '<TestInitialize()>  _
+    'Public Sub MyTestInitialize()
+    'End Sub
+    '
+    'Use TestCleanup to run code after each test has run
+    '<TestCleanup()>  _
+    'Public Sub MyTestCleanup()
+    'End Sub
+    '
+#End Region
+
+
+    '''<summary>
+    '''A test for valueType, this sub fro inserting values dapends on the type of value.
+    '''</summary>
+    <TestMethod()> _
+    Public Sub valueTypeTest()
+        Dim valuetext As Object = "Insert the first value" ' message for the number of value will insert
+        Dim value_type As Object = 3
+        Dim expected As String = 3
+        Dim actual As String
+        actual = ArithmeticFunctions.valueType(valuetext, value_type)
+        Assert.AreEqual(expected, actual)
+        Assert.Inconclusive("Verify the correctness of this test method.")
+    End Sub
+
+    '''<summary>
+    '''A test for Subtraction
+    '''</summary>
+    <TestMethod()> _
+    Public Sub SubtractionTest()
+        Dim value1 As Double = 4 ' first value 
+        Dim value2 As Double = 2 ' second value
+        Dim value_type As String = 3 ' type of value
+        Dim expected As String = 10 ' the result
+        Dim actual As String
+        actual = ArithmeticFunctions.Subtraction(value1, value2, value_type)
+        Assert.AreEqual(expected, actual)
+        Assert.Inconclusive("Verify the correctness of this test method.")
+    End Sub
+
+    '''<summary>
+    '''A test for Square_Root
+    '''</summary>
+    <TestMethod()> _
+    Public Sub Square_RootTest()
+        Dim value1 As Double = 2 ' first value
+        Dim value_type As String = 3 ' type of value
+        Dim expected As String = 4 ' the result
+        Dim actual As String
+        actual = ArithmeticFunctions.Square_Root(value1, value_type)
+        Assert.AreEqual(expected, actual)
+        Assert.Inconclusive("Verify the correctness of this test method.")
+    End Sub
+
+    '''<summary>
+    '''A test for Multiplication
+    '''</summary>
+    <TestMethod()> _
+    Public Sub MultiplicationTest()
+        Dim value1 As Integer = 2 ' first value
+        Dim value2 As Integer = 3 ' second value
+        Dim value_type As String = 1 ' type of value
+        Dim expected As String = 6 ' the result
+        Dim actual As String
+        actual = ArithmeticFunctions.Multiplication(value1, value2, value_type)
+        Assert.AreEqual(expected, actual)
+        Assert.Inconclusive("Verify the correctness of this test method.")
+    End Sub
+
+    '''<summary>
+    '''A test for Main
+    '''</summary>
+    <TestMethod()> _
+    Public Sub MainTest()
+        ArithmeticFunctions.Main()
+        Assert.Inconclusive("A method that does not return a value cannot be verified.")
+    End Sub
+
+    '''<summary>
+    '''A test for Exponent
+    '''</summary>
+    <TestMethod()> _
+    Public Sub ExponentTest()
+        Dim value1 As Integer = 3 ' first value
+        Dim value2 As Integer = 2 ' second value
+        Dim value_type As String = 1 ' type of value
+        Dim expected As String = 1 ' the result
+        Dim actual As String
+        actual = ArithmeticFunctions.Exponent(value1, value2, value_type)
+        Assert.AreEqual(expected, actual)
+        Assert.Inconclusive("Verify the correctness of this test method.")
+    End Sub
+
+    '''<summary>
+    '''A test for Division
+    '''</summary>
+    <TestMethod()> _
+    Public Sub DivisionTest()
+        Dim value1 As Integer = 10 ' first value
+        Dim value2 As Integer = 2 ' second value
+        Dim value_type As String = 1 ' type of value
+        Dim expected As String = 1 ' the result
+        Dim actual As String
+        actual = ArithmeticFunctions.Division(value1, value2, value_type)
+        Assert.AreEqual(expected, actual)
+        Assert.Inconclusive("Verify the correctness of this test method.")
+    End Sub
+
+    '''<summary>
+    '''A test for Conversion
+    '''</summary>
+    <TestMethod()> _
+    Public Sub ConversionTest()
+        Dim value1 As Integer = 3 ' the value
+        Dim conversion_type As String = 3 ' type of value
+        ArithmeticFunctions.Conversion(value1, conversion_type)
+        Assert.Inconclusive("A method that does not return a value cannot be verified.")
+    End Sub
+
+    '''<summary>
+    '''A test for addition
+    '''</summary>
+    <TestMethod()> _
+    Public Sub AdditionTest()
+        Dim value1 As Double = 2.3 ' first value
+        Dim value2 As Double = 2.0 ' second value
+        Dim value_type As String = 1 ' type of value
+        Dim expected As String = 4.3 ' the result
+        Dim actual As String
+        actual = ArithmeticFunctions.addition(value1, value2, value_type)
+        Assert.AreEqual(expected, actual)
+        Assert.Inconclusive("Verify the correctness of this test method.")
+    End Sub
+End Class
