@@ -1,5 +1,5 @@
 # Reusable-Arithmetic-Functions-library-
-This library of arithmetic functions. It is support basic operations Addition, Subtraction, Multiplication, Division, Square Root, Exponent, and Conversion. and performs arithmetic operations on numbers like integers, floating point, octal, binary, and hexadecimal.
+This library of arithmetic functions. It supports basic operations Addition, Subtraction, Multiplication, Division, Square Root, Exponent, and Conversion. and performs arithmetic operations on numbers like integers, floating point, octal, binary, and hexadecimal.
 
 Getting Started
 
